@@ -15,10 +15,12 @@ export default function Model(props) {
   const { nodes, materials, animations } = useGLTF("/earth.gltf")
   const { actions } = useAnimations(animations, group)
 
+  const [showMore, setShowMore] = props.showMoreState
+
   useFrame(() => {
-    if (props.showMore && group.current.position.x < 4.75) {
+    if (showMore && group.current.position.x < 4.75) {
       group.current.position.x += 0.25
-    } else if (!props.showMore && group.current.position.x > 0) {
+    } else if (!showMore && group.current.position.x > 0) {
       group.current.position.x -= 0.25
     }
     group.current.rotation.y += 0.0025
