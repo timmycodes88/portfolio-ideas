@@ -1,6 +1,6 @@
+import React, { Suspense } from "react"
 import { Environment } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
-import { Suspense } from "react"
 import tw from "twin.macro"
 import Earth from "./Earth"
 
